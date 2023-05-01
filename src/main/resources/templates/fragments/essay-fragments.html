@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Provides fragments that are used for all essays' webpages. -->
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:fragment="head_tag(title, description, id)">
+		<meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--
+			Many thanks to Twemoji for providing the emoji that's used as this website's favicon!
+			Twemoji (https://twemoji.twitter.com/) is by Twitter, Inc and other contributors.
+			Twemoji is licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/
+		-->
+		<link rel="icon" type="image/svg" href="../static/img/favicon.svg" th:href="@{/img/favicon.svg}" />
+		<title th:text="${title} + ' - On Good And Evil'">Sample Essay Title - On Good And Evil</title>
+		<meta name="description" th:content="${description}" content="Sample search description." />
+		<link rel="canonical" th:href="'https://ongoodandevil.com/blog/' + ${id}" href="https://ongoodandevil.com/blog/sample-essay-id" />
+		<link rel="stylesheet" type="text/css" href="../static/css/essay.css" th:href="@{/css/essay.css}" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header th:fragment="header(title, date)">
+			<h1 th:text="${title}" id="essay-title">Sample Essay Title</h1>
+			<time
+				th:text="${templateEngineHelper.processIsoDate(date)}"
+				th:time="${date}"
+				time="1970-01-01"
+				id="essay-date"
+			>
+				JANUARY 1, 1970
+			</time>
+		</header>
+		<address th:fragment="author" id="essay-author">
+			<p id="essay-by-author">By Westermeister</p>
+			<p id="essay-about-author">
+				I like to write about philosophy, politics, and ethics in general.
+				If you liked this essay or have any feedback, please <a rel="author" href="mailto:westermeister12@gmail.com">shoot me an email!</a>
+			</p>
+		</address>
+		<footer th:fragment="footer(year)" th:text="'Copyright ' + ${#strings.escapeXml('&copy;')} + ' ' + ${year} + ' Westermeister'">
+			Copyright &copy; 1970 Name
+		</footer>
+	</body>
+</html>

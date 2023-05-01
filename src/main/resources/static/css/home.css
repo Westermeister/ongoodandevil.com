@@ -1,0 +1,97 @@
+@import "base.css";
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+#title-on {
+	font-family: 'Dancing Script', cursive;
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+#title-good-and-evil {
+	font-family: 'Playfair Display', serif;
+	font-size: 3.5rem;
+	font-weight: 400;
+}
+
+#title-tagline-separator {
+	width: 300px;
+	border-top: 2px solid var(--border-color);
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
+
+#title-tagline {
+	font-size: 1.25rem;
+}
+
+main {
+	max-width: var(--max-width);
+	margin: 32px auto 0 auto;
+}
+
+.essay {
+	/* Disable default anchor styling. */
+	display: block;
+	color: inherit;
+	text-decoration: inherit;
+
+	background: var(--alt-background-color);
+	padding: 16px;
+	border-radius: 8px;
+}
+
+.essay:hover, .essay:active {
+	background: var(--alt-background-color-transparent);
+}
+
+.essay-title {
+	font-size: 2rem;
+	font-weight: 600;
+	margin: 0 0 16px 0;
+}
+
+.essay-date {
+	font-family: var(--secondary-font);
+	font-weight: var(--secondary-font-default-weight);
+	font-size: 0.875rem;
+	color: var(--alt-text-color);
+	display: block;
+}
+
+@media screen and (max-width: 425px) {
+	main {
+		max-width: var(--max-width-mobile);
+	}
+
+	#title-good-and-evil {
+		font-size: 3rem;
+	}
+
+	.essay-title {
+		font-size: 1.5rem;
+	}
+
+	@media screen and (max-width: 400px) {
+		#title-good-and-evil {
+			font-size: 2.5rem;
+		}
+
+		#title-tagline-separator {
+			width: 200px;
+		}
+	}
+}

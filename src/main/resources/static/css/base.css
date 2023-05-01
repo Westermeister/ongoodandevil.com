@@ -1,0 +1,31 @@
+/** Provides "global" rulesets and variables i.e. meant to be shared across all pages. */
+
+@import "normalize.css";
+
+:root {
+	--background-color: #f5f1e5;
+	--alt-background-color: #f0ead8;
+	--alt-background-color-transparent: #f0ead87f;
+	--text-color: #514d47;
+	--alt-text-color: #a39f96;
+	--link-color: #72abbf;
+	--border-color: #ddd9c9;
+
+	--primary-font: 'EB Garamond', serif;
+	--secondary-font: 'Roboto', sans-serif;
+	--secondary-font-default-weight: 700;
+
+	--max-width: 668px;
+	--max-width-mobile: 95%;
+}
+
+body {
+	background: var(--background-color);
+	color: var(--text-color);
+	font-family: var(--primary-font);
+}
+
+html, body {
+	min-height: 100vh;
+	overflow: auto;
+}
