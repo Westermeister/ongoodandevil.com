@@ -1,6 +1,10 @@
-/** Provides functions for the navigation bar. */
+/** This file provides functions for the navigation bar. */
 
-/** Toggle whether the navbar menu links are shown or not. */
+/**
+ * "onclick" handler function that's called when the menu icon is clicked.
+ * Toggles whether to show the menu links or not.
+ * Also sets the menu icon to be an "X" icon or a hamburger icon, depending on the current state.
+ */
 function toggleMenuLinks() {
 	const links = document.querySelector("#navbar-menu-links");
 	const icon = document.querySelector("#navbar-menu-icon");
