@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- This HTML file provides fragments that are used throughout the entire website. -->
+<html xmlns:th="http://www.thymeleaf.org">
+	<body>
+		<nav th:fragment="navbar">
+			<div id="navbar-inner-container">
+				<a id="navbar-home-link" href="/">
+					<img id="navbar-logo" alt="scales of justice" th:src="@{/img/favicon.svg}" src="../../static/img/favicon.svg" />
+					ON GOOD AND EVIL
+				</a>
+				<button type="button" id="navbar-menu-button" onclick="toggleMenuLinks()">
+					<i id="navbar-menu-icon" class="bi bi-list"></i>
+				</button>
+			</div>
+			<ul id="navbar-menu-links">
+				<a href="/" class="navbar-menu-link">Home</a>
+			</ul>
+		</nav>
+		<footer th:fragment="footer(year)" th:text="'Copyright ' + ${#strings.escapeXml('&copy;')} + ' ' + ${year} + ' Westermeister'">
+			Copyright &copy; 1970 Name
+		</footer>
+		<script th:fragment="navbar-script" th:src="@{/js/navbar.js}" src="../../static/js/navbar.js"></script>
+	</body>
+</html>

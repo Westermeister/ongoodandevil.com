@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- Provides fragments that are used for all essays' webpages. -->
+<!-- This HTML file provides fragments that are used for the blog posts i.e. "essays". -->
 <html xmlns:th="http://www.thymeleaf.org">
-	<head th:fragment="head_tag(title, description, id)">
+	<head th:fragment="head-tag(title, description, id)">
 		<meta charset="utf-8" />
     	<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--
@@ -55,6 +55,6 @@
 		<footer th:fragment="footer(year)" th:text="'Copyright ' + ${#strings.escapeXml('&copy;')} + ' ' + ${year} + ' Westermeister'">
 			Copyright &copy; 1970 Name
 		</footer>
-		<script th:fragment="navbar_script" th:src="@{/js/navbar.js}" src="../../static/js/navbar.js"></script>
+		<script th:fragment="navbar-script" th:src="@{/js/navbar.js}" src="../../static/js/navbar.js"></script>
 	</body>
 </html>

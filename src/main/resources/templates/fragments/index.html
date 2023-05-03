@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- Provides fragment for an essay listing on the homepage. -->
+<!-- This HTML file provides fragments that are used for the homepage. -->
 <html xmlns:th="http://www.thymeleaf.org">
 	<body>
-		<a th:fragment="main(title, date, id)" th:href="'/blog/' + ${id}" href="/" class="essay">
+		<a th:fragment="essay-list-item(title, date, id)" th:href="'/blog/' + ${id}" href="/" class="essay">
 			<h2 th:text="${title}" class="essay-title">Sample Essay Title</h2>
 			<!-- Convert "YYYY-MM-DD" to MONTH DAY YEAR e.g. "1970-01-01" becomes "JAN 1 1970". -->
 			<time
