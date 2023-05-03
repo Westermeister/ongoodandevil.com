@@ -1,3 +1,5 @@
+/* Provides styling for the "essays" i.e. blog post pages. */
+
 @import "../base/global.css";
 @import "../components/navbar.css";
 @import "../components/footer.css";
