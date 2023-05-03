@@ -29,6 +29,10 @@ nav {
 	border-bottom: 1px solid var(--border-color);
 }
 
+.navbar-menu-link:hover, .navbar-menu-link:active {
+	background: var(--alt-background-color-hover);
+}
+
 #navbar-menu-links:last-child {
 	border-bottom: none;
 }
