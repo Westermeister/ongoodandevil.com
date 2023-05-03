@@ -9,16 +9,31 @@
 			Twemoji (https://twemoji.twitter.com/) is by Twitter, Inc and other contributors.
 			Twemoji is licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/
 		-->
-		<link rel="icon" type="image/svg" href="../static/img/favicon.svg" th:href="@{/img/favicon.svg}" />
+		<link rel="icon" type="image/svg" th:href="@{/img/favicon.svg}" href="../../static/img/favicon.svg" />
 		<title th:text="${title} + ' - On Good And Evil'">Sample Essay Title - On Good And Evil</title>
 		<meta name="description" th:content="${description}" content="Sample search description." />
 		<link rel="canonical" th:href="'https://ongoodandevil.com/blog/' + ${id}" href="https://ongoodandevil.com/blog/sample-essay-id" />
-		<link rel="stylesheet" type="text/css" href="../static/css/essay.css" th:href="@{/css/essay.css}" />
+		<link rel="stylesheet" type="text/css" th:href="@{/css/pages/essay.css}" href="../static/css/pages/essay.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
 	</head>
 	<body>
+		<nav th:fragment="navbar">
+			<div id="navbar-inner-container">
+				<a id="navbar-home-link" href="/">
+					<img id="navbar-logo" alt="scales of justice" th:src="@{/img/favicon.svg}" src="../../static/img/favicon.svg" />
+					ON GOOD AND EVIL
+				</a>
+				<button type="button" id="navbar-menu-button" onclick="toggleMenuLinks()">
+					<i id="navbar-menu-icon" class="bi bi-list"></i>
+				</button>
+			</div>
+			<ul id="navbar-menu-links">
+				<li class="navbar-menu-link"><a href="/">Home</a></li>
+			</ul>
+		</nav>
 		<header th:fragment="header(title, date)">
 			<h1 th:text="${title}" id="essay-title">Sample Essay Title</h1>
 			<time
@@ -40,5 +55,6 @@
 		<footer th:fragment="footer(year)" th:text="'Copyright ' + ${#strings.escapeXml('&copy;')} + ' ' + ${year} + ' Westermeister'">
 			Copyright &copy; 1970 Name
 		</footer>
+		<script th:fragment="navbar_script" th:src="@{/js/navbar.js}" src="../../static/js/navbar.js"></script>
 	</body>
 </html>
