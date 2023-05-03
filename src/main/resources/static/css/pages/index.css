@@ -1,4 +1,4 @@
-@import "base.css";
+@import "../base/global.css";
 
 header {
 	display: flex;

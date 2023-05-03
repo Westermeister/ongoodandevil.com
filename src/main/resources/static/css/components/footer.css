@@ -1,0 +1,19 @@
+@import "base.css";
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 3rem;
+	background: var(--alt-background-color);
+	color: var(--alt-text-color);
+	font-family: var(--secondary-font);
+	font-weight: var(--secondary-font-default-weight);
+	font-size: 0.875rem;
+	border-top: 1px solid var(--border-color);
+
+	/* Stick to bottom of page when content is too short for a scrollbar. */
+	position: sticky;
+	top: 100vh;
+}
