@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class BlogController {
 	@GetMapping("/")
-	public String home(Model model) {
+	public String index(Model model) {
 		model.addAttribute("templateEngineHelper", TemplateEngineHelper.getInstance());
-		return "home";
+		return "index";
 	}
 
 	@GetMapping("/blog/{id}")
