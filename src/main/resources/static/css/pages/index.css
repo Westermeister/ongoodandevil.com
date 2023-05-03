@@ -57,7 +57,7 @@ main {
 }
 
 .essay:hover, .essay:active {
-	background: var(--alt-background-color-transparent);
+	background: var(--alt-background-color-hover);
 }
 
 .essay-title {
