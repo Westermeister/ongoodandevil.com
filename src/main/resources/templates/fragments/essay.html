@@ -2,19 +2,11 @@
 <!-- This HTML file provides fragments that are used for the blog posts i.e. "essays". -->
 <html xmlns:th="http://www.thymeleaf.org">
 	<head th:fragment="head-tag(title, description, id)">
-		<meta charset="utf-8" />
-    	<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--
-			Many thanks to Twemoji for providing the emoji that's used as this website's favicon!
-			Twemoji (https://twemoji.twitter.com/) is by Twitter, Inc and other contributors.
-			Twemoji is licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/
-		-->
-		<link rel="icon" type="image/svg" th:href="@{/img/favicon.svg}" href="../../static/img/favicon.svg" />
+		<th:block th:replace="~{fragments/global :: common-head-tags}"></th:block>
 		<title th:text="${title} + ' - On Good And Evil'">Sample Essay Title - On Good And Evil</title>
 		<meta name="description" th:content="${description}" content="Sample search description." />
 		<link rel="canonical" th:href="'https://ongoodandevil.com/blog/' + ${id}" href="https://ongoodandevil.com/blog/sample-essay-id" />
 		<link rel="stylesheet" type="text/css" th:href="@{/css/pages/essay.css}" href="../static/css/pages/essay.css" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
