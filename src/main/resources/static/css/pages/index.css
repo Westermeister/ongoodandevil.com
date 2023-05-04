@@ -1,6 +1,8 @@
 /* Provides styling for the homepage. */
 
 @import "../base/global.css";
+@import "../components/navbar.css";
+@import "../components/footer.css";
 
 header {
 	display: flex;
