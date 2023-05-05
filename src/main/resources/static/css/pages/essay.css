@@ -53,6 +53,7 @@ a:hover, a:active {
 	font-style: normal;
 	background: var(--alt-background-color);
 	margin-bottom: 5rem;
+	margin-top: 3rem;
 }
 
 #essay-by-author {
