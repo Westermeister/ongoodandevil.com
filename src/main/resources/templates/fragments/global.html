@@ -3,6 +3,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<th:block th:fragment="common-head-tags">
+			<script th:src="@{/js/theme.js}" src="../../static/js/theme.js"></script>
 			<meta charset="utf-8" />
     		<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<!--
@@ -15,18 +16,28 @@
 		</th:block>
 	</head>
 	<body>
-		<nav th:fragment="navbar">
+		<nav th:fragment="navbar" id="navbar">
 			<div id="navbar-inner-container">
 				<a id="navbar-home-link" href="/">
 					<img id="navbar-logo" alt="scales of justice" th:src="@{/img/favicon.svg}" src="../../static/img/favicon.svg" />
 					ON GOOD AND EVIL
 				</a>
-				<button type="button" id="navbar-menu-button" onclick="toggleMenuLinks()">
+				<button type="button" id="navbar-menu-button" onclick="toggleMenuItems()">
 					<i id="navbar-menu-icon" class="bi bi-list"></i>
 				</button>
 			</div>
-			<ul id="navbar-menu-links">
-				<a href="/" class="navbar-menu-link">Home</a>
+			<ul id="navbar-menu-items">
+				<li class="navbar-menu-item-container">
+					<a href="/" class="navbar-menu-item navbar-menu-link">Home</a>
+				</li>
+				<li class="navbar-menu-item-container">
+					<div class="navbar-menu-item">
+						Theme:
+						<button type="button" class="navbar-theme-button" onclick="setPreferredTheme('light-theme')">Light</button> /
+						<button type="button" class="navbar-theme-button" onclick="setPreferredTheme('dark-theme')">Dark</button> /
+						<button type="button" class="navbar-theme-button" onclick="setPreferredTheme('device-theme')">Device theme</button>
+					</div>
+				</li>
 			</ul>
 		</nav>
 		<footer th:fragment="footer(year)" th:text="'Copyright ' + ${#strings.escapeXml('&copy;')} + ' ' + ${year} + ' Westermeister'">
