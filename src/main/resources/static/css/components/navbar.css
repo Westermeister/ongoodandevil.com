@@ -56,16 +56,15 @@
 	justify-content: space-between;
 }
 
-.navbar-theme-button {
-	border: none;
-	background: transparent;
-	color: var(--link-color);
-	font-weight: 500;
+#navbar-theme-dropdown {
+	background: var(--background-color);
+	color: var(--text-color);
+	border: 1px solid var(--border-color);
+	margin-left: 0.5rem;
 }
 
-.navbar-theme-button:hover {
-	text-decoration: underline;
-	cursor: pointer;
+.navbar-theme-option {
+	background: var(--alt-background-color);
 }
 
 #navbar-logo {

@@ -3,7 +3,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<th:block th:fragment="common-head-tags">
-			<script th:src="@{/js/theme.js}" src="../../static/js/theme.js"></script>
+			<script th:src="@{/js/set-theme.js}" src="../../static/js/set-theme.js"></script>
 			<meta charset="utf-8" />
     		<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<!--
@@ -32,10 +32,12 @@
 				</li>
 				<li class="navbar-menu-item-container">
 					<div class="navbar-menu-item">
-						Theme:
-						<button type="button" class="navbar-theme-button" onclick="setPreferredTheme('light-theme')">Light</button> /
-						<button type="button" class="navbar-theme-button" onclick="setPreferredTheme('dark-theme')">Dark</button> /
-						<button type="button" class="navbar-theme-button" onclick="setPreferredTheme('device-theme')">Device theme</button>
+						Color theme:
+						<select id="navbar-theme-dropdown" onchange="setPreferredTheme(this.value)">
+							<option class="navbar-theme-option" value="device-theme">Use device theme</option>
+							<option class="navbar-theme-option" value="light-theme">Light theme</option>
+							<option class="navbar-theme-option" value="dark-theme">Dark theme</option>
+						</select>
 					</div>
 				</li>
 			</ul>
