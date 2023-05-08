@@ -1,3 +1,8 @@
+# 2023.05.07.2
+
+- Slightly increased spacing between title and navigation bar on homepage.
+- Refactored `index.css` stylesheet to use more `rem` units instead of `px` units.
+
 # 2023.05.07.1
 
 - Added `www` to canonical URLs for all existing pages.
