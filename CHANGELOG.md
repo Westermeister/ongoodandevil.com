@@ -1,3 +1,8 @@
+# 2023.05.07.3
+
+- Fixed incorrect publish date on homepage for post `Sensation Precedes Thought`.
+- Added missing version tags with `git tag`.
+
 # 2023.05.07.2
 
 - Slightly increased spacing between title and navigation bar on homepage.
@@ -9,4 +14,4 @@
 
 # 2023.05.07
 
-- Initial release with one blog post.
+- Initial release with one blog post: `Sensation Precedes Thought`
