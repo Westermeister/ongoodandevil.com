@@ -29,7 +29,7 @@
 		<header th:fragment="header(title, date)">
 			<h1 th:text="${title}" id="essay-title">Sample Essay Title</h1>
 			<time
-				th:text="${templateEngineHelper.processIsoDate(date)}"
+				th:text="${helper.processIsoDate(date)}"
 				th:time="${date}"
 				time="1970-01-01"
 				id="essay-date"

@@ -6,7 +6,7 @@
 			<h2 th:text="${title}" class="essay-title">Sample Essay Title</h2>
 			<!-- Convert "YYYY-MM-DD" to MONTH DAY YEAR e.g. "1970-01-01" becomes "JAN 1 1970". -->
 			<time
-				th:text="${templateEngineHelper.processIsoDate(date)}"
+				th:text="${helper.processIsoDate(date)}"
 				th:time="${date}"
 				time="1970-01-01"
 				class="essay-date"

@@ -1,28 +1,17 @@
 package com.ongoodandevil.blog;
 
+import java.time.format.TextStyle;
 import java.time.LocalDate;
 import java.time.Month;
-import java.time.format.TextStyle;
 import java.util.Locale;
 
+import org.springframework.stereotype.Component;
+
 /**
- * Singleton class that provides utility functions for Thymeleaf.
+ * Provides helpful utility functions.
  */
-public class TemplateEngineHelper {
-	private static TemplateEngineHelper instance;
-
-	private TemplateEngineHelper() {}
-
-	/**
-	 * Return the singleton instance.
-	 */
-	public static synchronized TemplateEngineHelper getInstance() {
-		if (instance == null) {
-			instance = new TemplateEngineHelper();
-		}
-		return instance;
-	}
-
+@Component
+public class BlogHelper {
 	/**
 	 * Converts numerical date to human-readable format.
 	 *
