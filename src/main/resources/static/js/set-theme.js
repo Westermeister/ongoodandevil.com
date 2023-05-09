@@ -15,7 +15,7 @@ if (hasSavedPreference) {
 }
 
 // Need to defer until page is loaded until we can access and set the navbar dropdown appropriately.
-window.onload = () => {
+window.onload = function () {
 	const navbarDropdown = document.querySelector("#navbar-theme-dropdown");
 	if (hasSavedPreference) {
 		navbarDropdown.value = savedPreference;
