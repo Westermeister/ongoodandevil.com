@@ -61,6 +61,7 @@ main {
 	background: var(--alt-background-color);
 	padding: 1rem;
 	border-radius: 0.5rem;
+	border: 1px solid var(--border-color);
 }
 
 .essay:hover, .essay:active {
