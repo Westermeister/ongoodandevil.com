@@ -1,3 +1,8 @@
+# 2023.05.09.1
+
+- Fixed a bug where the color-theme dropdown setting lags behind the rest of the page when switching themes.
+	- Specifically, the dropdown border color had a short transition before changing colors due to the default Bootstrap styling.
+
 # 2023.05.09
 
 - Refactored backend and added Javadoc comments.
