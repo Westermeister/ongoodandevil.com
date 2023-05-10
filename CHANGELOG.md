@@ -1,3 +1,13 @@
+# 2023.05.09
+
+- Refactored backend and added Javadoc comments.
+- Added language metadata i.e. `lang="en-US"` for post `Sensation Precedes Thought`.
+- Now using Bootstrap for the color theme dropdown in the navbar.
+- Now using Bootstrap Reboot instead of Normalize; refactored stylesheets accordingly.
+- Made essay titles slightly smaller on mobile.
+- Added a border around the essay list-items on the homepage.
+- Other minor refactors.
+
 # 2023.05.07.3
 
 - Fixed incorrect publish date on homepage for post `Sensation Precedes Thought`.
