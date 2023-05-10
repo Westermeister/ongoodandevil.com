@@ -6,12 +6,16 @@ const hasSavedPreference = savedPreference === "light-theme" || savedPreference 
 
 if (hasSavedPreference) {
 	root.classList.add(savedPreference);
+	root.setAttribute("data-bs-theme", savedPreference.split("-")[0]);
 } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
 	root.classList.add("light-theme");
+	root.setAttribute("data-bs-theme", "light");
 } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
 	root.classList.add("dark-theme");
+	root.setAttribute("data-bs-theme", "dark");
 } else {
 	root.classList.add("light-theme");
+	root.setAttribute("data-bs-theme", "light");
 }
 
 // Need to defer until page is loaded until we can access and set the navbar dropdown appropriately.

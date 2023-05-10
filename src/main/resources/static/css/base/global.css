@@ -11,7 +11,7 @@
 	--max-width-mobile: 95%;
 }
 
-:root.light-theme {
+.light-theme {
 	--background-color: #f5f1e5;
 	--alt-background-color: #f0ead8;
 	--alt-background-color-hover: #e3ddcc;
@@ -21,7 +21,7 @@
 	--border-color: #ddd9c9;
 }
 
-:root.dark-theme {
+.dark-theme {
 	--background-color: #282828;
 	--alt-background-color: #222222;
 	--alt-background-color-hover: #2e2e2e;

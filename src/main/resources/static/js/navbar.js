@@ -35,22 +35,27 @@ function setPreferredTheme(theme) {
 		if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
 			root.classList.remove("dark-theme");
 			root.classList.add("light-theme");
+			root.setAttribute("data-bs-theme", "light");
 		} else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
 			root.classList.remove("light-theme");
 			root.classList.add("dark-theme");
+			root.setAttribute("data-bs-theme", "dark");
 		} else {
 			root.classList.remove("dark-theme");
 			root.classList.add("light-theme");
+			root.setAttribute("data-bs-theme", "light");
 		}
 	} else if (theme === "light-theme") {
 		// Set theme and save preference.
 		root.classList.remove("dark-theme");
 		root.classList.add(theme);
+		root.setAttribute("data-bs-theme", "light");
 		localStorage.setItem("theme", theme);
 	} else if (theme === "dark-theme") {
 		// Set theme and save preference.
 		root.classList.remove("light-theme");
 		root.classList.add(theme);
+		root.setAttribute("data-bs-theme", "dark");
 		localStorage.setItem("theme", theme);
 	} else {
 		throw new Error(`Unrecognized theme: ${theme}`);
