@@ -1,6 +1,6 @@
 /* Provides styling for the "essays" i.e. blog post pages. */
 
-@import "../base/global.css";
+@import "../base.css";
 @import "../components/navbar.css";
 @import "../components/footer.css";
 
@@ -13,13 +13,14 @@ header, main, #essay-author {
 }
 
 header {
-	margin: 2rem auto;
+	margin: 0 auto 2rem auto;
 }
 
 #essay-title {
 	font-size: 2.5rem;
 	font-weight: 600;
 	margin-top: 0;
+	margin-bottom: 1.5rem;
 }
 
 #essay-date {

@@ -1,7 +1,5 @@
 /** Provides "global" rulesets and variables i.e. meant to be shared across all pages. */
 
-@import "normalize.css";
-
 :root {
 	--primary-font: 'EB Garamond', serif;
 	--secondary-font: 'Roboto', sans-serif;

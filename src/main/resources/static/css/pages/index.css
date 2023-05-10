@@ -1,6 +1,6 @@
 /* Provides styling for the homepage. */
 
-@import "../base/global.css";
+@import "../base.css";
 @import "../components/navbar.css";
 @import "../components/footer.css";
 
@@ -9,6 +9,7 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 2rem;
 }
 
 #title {
@@ -16,7 +17,7 @@ header {
 	flex-direction: column;
 	align-items: center;
 	gap: 0.5rem;
-	margin-top: 2rem;
+	margin-bottom: 1.75rem;
 }
 
 #title-on {
@@ -37,6 +38,9 @@ header {
 	border-left: none;
 	border-right: none;
 	border-bottom: none;
+	opacity: 1;
+	margin-top: 0;
+	margin-bottom: 1.5rem;
 }
 
 #title-tagline {
@@ -45,7 +49,7 @@ header {
 
 main {
 	max-width: var(--max-width);
-	margin: 2rem auto 0 auto;
+	margin: 0 auto;
 }
 
 .essay {

@@ -1,11 +1,12 @@
 /* Provides styling for the navigation bar at the top of each page. */
 
-@import "../base/global.css";
+@import "../base.css";
 
 #navbar {
 	height: 3rem;
 	background: var(--alt-background-color);
 	border-bottom: 1px solid var(--border-color);
+	margin-bottom: 2rem;
 }
 
 #navbar-menu-items {

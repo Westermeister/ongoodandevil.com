@@ -1,6 +1,6 @@
 /* Provides styling for the footer / copyright notice at the bottom of each page. */
 
-@import "../base/global.css";
+@import "../base.css";
 
 footer {
 	display: flex;
