@@ -12,20 +12,6 @@
 		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Roboto:wght@700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<nav th:fragment="navbar">
-			<div id="navbar-inner-container">
-				<a id="navbar-home-link" href="/">
-					<img id="navbar-logo" alt="scales of justice" th:src="@{/img/favicon.svg}" src="../../static/img/favicon.svg" />
-					ON GOOD AND EVIL
-				</a>
-				<button type="button" id="navbar-menu-button" onclick="toggleMenuLinks()">
-					<i id="navbar-menu-icon" class="bi bi-list"></i>
-				</button>
-			</div>
-			<ul id="navbar-menu-links">
-				<a href="/" class="navbar-menu-link">Home</a>
-			</ul>
-		</nav>
 		<header th:fragment="header(title, date)">
 			<h1 th:text="${title}" id="essay-title">Sample Essay Title</h1>
 			<time
@@ -45,9 +31,5 @@
 				<a rel="author" href="mailto:westermeister12@gmail.com">send me an email!</a>
 			</p>
 		</address>
-		<footer th:fragment="footer(year)" th:text="'Copyright ' + ${#strings.escapeXml('&copy;')} + ' ' + ${year} + ' Westermeister'">
-			Copyright &copy; 1970 Name
-		</footer>
-		<script th:fragment="navbar-script" th:src="@{/js/navbar.js}" src="../../static/js/navbar.js"></script>
 	</body>
 </html>
