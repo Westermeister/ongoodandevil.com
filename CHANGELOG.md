@@ -1,3 +1,7 @@
+# 2023.05.11
+
+- Now using PNG favicon instead of SVG favicon.
+
 # 2023.05.10
 
 - Migrated Gradle build files from Groovy DSL to Kotlin DSL.
