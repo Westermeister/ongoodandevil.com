@@ -1,3 +1,7 @@
+# 2023.05.10
+
+- Migrated Gradle build files from Groovy DSL to Kotlin DSL.
+
 # 2023.05.09.1
 
 - Fixed a bug where the color-theme dropdown setting lags behind the rest of the page when switching themes.
