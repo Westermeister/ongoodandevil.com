@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- Custom 404 page. -->
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<th:block th:replace="~{fragments/global :: common-head-tags}"></th:block>
+		<title>Page not found - On Good And Evil</title>
+		<link rel="stylesheet" type="text/css" href="../static/css/pages/error.css" th:href="@{/css/pages/error.css}" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=EB+Garamond:wght@400;500;600&family=Playfair+Display&family=Roboto:wght@700&display=swap" rel="stylesheet">
+	<body>
+		<div th:replace="~{fragments/global :: navbar}"></div>
+		<header class="container">
+			<h1 id="page-not-found">Page not found</h1>
+		</header>
+		<main class="container">
+			<p id="explanation">The page you're looking for has either moved, or no longer exists.</p>
+		</main>
+		<div th:replace="~{fragments/global :: navbar-script}"></div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+@import "../base.css";
+@import "../components/navbar.css";
+
+#page-not-found {
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+}
+
+#explanation {
+	font-size: 1.3125rem;
+}
+
+.container {
+	max-width: 668px;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 700px) {
+	.container {
+		max-width: 95%;
+	}
+}
