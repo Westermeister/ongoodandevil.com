@@ -1,3 +1,10 @@
+# 2023.05.11.1
+
+- Added custom 404 error page.
+- Added XML sitemap for all existing pages + corresponding `robots.txt` that links to the sitemap.
+- Added tests.
+- Changed name of light / dark theme setting from "Color theme" to just "Theme".
+
 # 2023.05.11
 
 - Now using PNG favicon instead of SVG favicon.
